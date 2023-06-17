@@ -1,1 +1,1 @@
-README file for this project
+This is repo for the project "Getting started with C"
