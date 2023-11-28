@@ -220,7 +220,7 @@ int main(int argc, char *argv[])
 
 	if (fd < 0)
 	{
-		dprintf(STDERR_FILENO, "Err: file can not be open\n");
+		dprintf(STDERR_FILENO, "Err: file cannot be opened\n");
 		exit(98);
 	}
 
@@ -229,13 +229,13 @@ int main(int argc, char *argv[])
 
 	if (ret_read == -1)
 	{
-		dprintf(STDERR_FILENO, "Err: The file can not be read\n");
+		dprintf(STDERR_FILENO, "Err: The file cannot be read\n");
 		exit(98);
 	}
 
 	if (!check_elf(ptr))
 	{
-		dprintf(STDERR_FILENO, "Err: It is not an ELF\n");
+		dprintf(STDERR_FILENO, "Err: Not an ELF\n");
 		exit(98);
 	}
 
