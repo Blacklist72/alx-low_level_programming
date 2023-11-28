@@ -162,8 +162,11 @@ void check_sys(char *ptr)
 {
 	char sys = ptr[4] + '0';
 
-	if (sys == '0')
+	if (sys != '1' && sys != '2')
+	{
+		dprintf(STDERR_FILENO, "Err: Not a valid ELF file\n");
 		exit(98);
+	}
 
 	printf("ELF Header:\n");
 	print_magic(ptr);
@@ -171,7 +174,7 @@ void check_sys(char *ptr)
 	if (sys == '1')
 		printf("  Class:                             ELF32\n");
 
-	if (sys == '2')
+	else (sys == '2')
 		printf("  Class:                             ELF64\n");
 
 	print_data(ptr);
