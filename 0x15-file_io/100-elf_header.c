@@ -172,13 +172,9 @@ void check_sys(char *ptr)
 	print_magic(ptr);
 
 	if (sys == '1')
-	{
 		printf("  Class:                             ELF32\n");
-	}
 	else if (sys == '2')
-	{
 		printf("  Class:                             ELF64\n");
-	}
 
 	print_data(ptr);
 	print_version(ptr);
